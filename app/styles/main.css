@@ -119,3 +119,11 @@ th {
 tbody {
   background-color: #fff
 }
+
+.nav-li {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 1px #ccc solid;
+  border-bottom: 1px #ccc solid;
+  background-color: #f5f5f5;
+}
