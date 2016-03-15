@@ -8,8 +8,9 @@
     <title>Hawk Ridge Systems - Subscriptions Web Portal</title>
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
+
     <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
@@ -46,7 +47,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav nav-justified">
-                    <li>
+                    <li class="active">
                         <a href="current-renewal.html" class="navTop text-nowrap">
                             <!-- <i class="fa fa-cog" style="font-size: 1.8em;"></i> -->Current Renewal</a>
                     </li>
@@ -62,7 +63,7 @@
                         <a href="order-history.html" class="navTop text-nowrap">
                             <!-- <i class="fa fa-shopping-cart fa-2x"></i> -->Order History</a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="login.html" class="navTop text-nowrap">
                             <!-- <i class="fa fa-sign-out fa-2x"></i> -->Sign Out</a>
                     </li>
@@ -72,49 +73,114 @@
     </nav>
     <div class="panel panel-info panel-noBorder">
         <div class="panel-heading panelStraight text-center">
-            <h2 class="panel-titler">Sign In</h2>
+            <h2 class="panel-titler">Renewing your SOLIDWORKS Subscription has never been easier!</h2>
         </div>
         <div class="panel-body">
-        <p>&nbsp;</p>
-            <form class="form-horizontal col-md-10 col-md-offset-1">
-                <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-4 control-label">Email</label>
-                    <div class="col-sm-6">
-                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+            <table class="table table-responsive table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th class="text-center">Quote Due</th>
+                        <th class="text-center">Subscription Period</th>
+                        <th class="text-center">Annual Subscription Fee</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center">
+                            <a href="#" id="showQuote">QT-12345678 <i class="fa fa-info-circle" style="font-size:1.1em;"></i></a>
+                        </td>
+                        <td class="text-center">
+                            Mar. 1, 2016 - Feb. 28, 2017
+                        </td>
+                        <td class="text-center">
+                            $1,000,000
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" id="quoteDetails" class="hidden well">
+<h3>Quote Details</h3>
+                        Swine beef ribs corned beef rump ball tip, jerky tongue bresaola alcatra shank biltong. Sausage short loin prosciutto, pig capicola meatball spare ribs leberkas. Strip steak pork loin brisket tenderloin, ham shank pork chop. Meatball bacon t-bone flank ground round.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- <div class="well" id="quoteDetails"></div> -->
+            <div class="col-md-6 col-md-offset-3">
+                <!-- CREDIT CARD FORM STARTS HERE -->
+                <div class="panel panel-default credit-card-box img-rounded">
+                    <div class="panel-heading display-table">
+                                <h3 class="noMargin">Payment Details</h3>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-4 control-label">Password</label>
-                    <div class="col-sm-6">
-                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-4 col-sm-8">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox"> Remember me
-                            </label>
+                    <div class="panel-body">
+                        <form role="form" id="payment-form">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-md-6">
+                                            <label for="cardNumber">CARD NUMBER</label>
+                                        </div>
+                                        <div class="col-xs-6 col-md-6">
+                                                <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
+                                            
+                                        </div>
+                                        </div>
+                                        <div class="input-group col-md-12">
+                                            <input type="tel" class="form-control" name="cardNumber" placeholder="Valid Card Number" autocomplete="cc-number" required autofocus />
+                                            <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-7 col-md-7">
+                                    <div class="form-group">
+                                        <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
+                                        <input type="tel" class="form-control" name="cardExpiry" placeholder="MM / YY" autocomplete="cc-exp" required />
+                                    </div>
+                                </div>
+                                <div class="col-xs-5 col-md-5 pull-right">
+                                    <div class="form-group">
+                                        <label for="cardCVC">CV CODE</label>
+                                        <input type="tel" class="form-control" name="cardCVC" placeholder="CVC" autocomplete="cc-csc" required />
+                                    </div>
+                                </div>
+                            </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <button class="btn btn-success btn-lg btn-block" type="submit">Renew Subscription</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-4 col-sm-8">
-                        <button type="submit" class="btn btn-success">Sign in</button>
+                    <div class="row" style="display:none;">
+                        <div class="col-xs-12">
+                            <p class="payment-errors"></p>
+                        </div>
                     </div>
-                    <div class="col-sm-offset-4 col-sm-8">
-                        <p>&nbsp;</p>
-                        <p>Don't have an account?</p>
-                        <p><a href="index.html">Click here</a> to register.</p>
+                    </form>
+
                     </div>
                 </div>
-            </form>
+            </div>
+            <!-- CREDIT CARD FORM ENDS HERE -->
         </div>
     </div>
-
     <div class="footer text-center">
         Have a question? Please contact us at <a href="mailto:info@hawkridgesys.com">info@hawkridgesys.com</a> and we will be happy to assist you.
     </div>
+    </div>
+
+    <script>
+    $(document).ready(function(){
+        $("#showQuote").click(function(){
+            // $("p").hide();
+            $("#quoteDetails").toggleClass("hidden", 300, "easeInOutQuint" );
+        });
+        $("#show").click(function(){
+            $("p").show();
+        });
+    });
+    </script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
     (function(b, o, i, l, e, r) {
@@ -134,11 +200,8 @@
     </script>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/jquery-validation/dist/jquery.validate.js"></script>
     <script src="/bower_components/jquery.payment/lib/jquery.payment.js"></script>
-    <script src="/bower_components/bootstrap-material-design/dist/js/material.js"></script>
-    <script src="/bower_components/bootstrap-material-design/dist/js/ripples.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js scripts/plugins.js -->

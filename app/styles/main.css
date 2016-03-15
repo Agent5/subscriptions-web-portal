@@ -7,9 +7,9 @@
 
 /* Space out content a bit */
 body {
-  padding-top: 0;
+  padding-top: 95px;
   padding-bottom: 0;
-  background-color: #fff;
+  background-color: #f5f5f5;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -59,15 +59,15 @@ body {
 }
 
 /* Main marketing message and sign up button */
-.jumbotron {
+/*.jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
-}
+}*/
 
-.jumbotron .btn {
+/*.jumbotron .btn {
   font-size: 21px;
   padding: 14px 24px;
-}
+}*/
 
 /* Supporting marketing content */
 .marketing {
@@ -77,6 +77,15 @@ body {
 .marketing p + h4 {
   margin-top: 28px;
 }
+
+@media screen and (min-width: 320px) and (max-width: 568px){
+  h2.panel-titler {
+
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  }
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
@@ -98,9 +107,9 @@ body {
   }
 
   /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
+  /*.jumbotron {
     border-bottom: 0;
-  }
+  }*/
 }
 
 .chunky-form label {
@@ -135,3 +144,64 @@ tbody {
 .profilePic {
   font-size: 8em;
 }
+
+.navTile h2 {
+  margin-top: 0;
+}
+
+.navbar > .container {
+  background-color: transparent;
+  border: 0;
+}
+
+.container.addAllBorders {
+  border: 1px #ccc solid;
+}
+
+.vcenter {
+    /*display: inline-block;*/
+    vertical-align: middle;
+    /*float: none;*/
+}
+
+.nav > li > a.navTop:hover, .nav > li > a.navTop:focus {
+    text-decoration: none;
+    background-color: #246B9C;
+    color: #fff;
+}
+
+a.navTop {
+  color: #fff;
+  height: 51px;
+}
+
+ul > li.active {
+  background-color: #246B9C;
+}
+
+.panel.panel-info.panel-noBorder {
+
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 730px;
+}
+
+.panel-heading.panelStraight {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.panel-titler {
+  color: #fff;
+  padding-right: 70px;
+  padding-left: 70px;
+}
+
+.noMargin{
+  margin: 0;
+}
+
+/*.navHeight{
+  min-height: 65px;
+}*/
